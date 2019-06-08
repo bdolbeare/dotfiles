@@ -1,0 +1,26 @@
+actions:
+  post:
+    loginstall: "echo {{@@ _dotfile_abs_src @@}} installed to {{@@ _dotfile_abs_dst @@}} >> {0}"
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  ignoreempty: false
+  keepdot: false
+  link_dotfile_default: nolink
+  link_on_import: nolink
+  longkey: false
+  showdiff: false
+  workdir: ~/.config/dotdrop
+  default_actions:
+    - loginstall "/tmp/dotdrop-installation.log"
+dotfiles: 
+  vim:
+    dst: ~/tmp
+    src: bash
+    link: link_children
+profiles:
+  home:
+    dotfiles:
+      - vim 
