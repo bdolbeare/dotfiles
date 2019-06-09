@@ -15,12 +15,42 @@ config:
   workdir: ~/.config/dotdrop
   default_actions:
     - loginstall "/tmp/dotdrop-installation.log"
-dotfiles: 
-  vim:
-    dst: ~/tmp
+dotfiles:
+  bash:
+    dst: ~/
     src: bash
+    link: link_children
+  git:
+      dst: ~/
+      src: git
+      link: link_children
+  misc:
+      dst: ~/
+      src: misc
+      link: link_children
+  tmux:
+      dst: ~/.tmux.conf
+      src: tmux/.tmux.conf
+      link: link
+  tmux-confdir:
+      dst: ~/.tmux
+      src: tmux/.tmux
+      link: link_children
+  vim:
+      dst: ~/
+      src: vim
+      link: link_children
+  zsh:
+    dst: ~/
+    src: zsh
     link: link_children
 profiles:
   home:
     dotfiles:
-      - vim 
+      - bash
+      - git
+      - misc
+      - tmux
+      - tmux-confdir
+      - vim
+      - zsh
