@@ -1,6 +1,7 @@
 actions:
   post:
-    loginstall: "echo {{@@ _dotfile_abs_src @@}} installed to {{@@ _dotfile_abs_dst @@}} >> {0}"
+    loginstall: echo {{@@ _dotfile_abs_src @@}} installed to {{@@ _dotfile_abs_dst
+      @@}} >> {0}
 config:
   backup: true
   banner: true
@@ -14,32 +15,33 @@ config:
   showdiff: false
   workdir: ~/.config/dotdrop
   default_actions:
-    - loginstall "/tmp/dotdrop-installation.log"
+  - loginstall "/tmp/dotdrop-installation.log"
+  minversion: 1.12.8
 dotfiles:
   bash:
     dst: ~/
     src: bash
     link: link_children
   git:
-      dst: ~/
-      src: git
-      link: link_children
+    dst: ~/
+    src: git
+    link: link_children
   misc:
-      dst: ~/
-      src: misc
-      link: link_children
+    dst: ~/
+    src: misc
+    link: link_children
   tmux:
-      dst: ~/.tmux.conf
-      src: tmux/.tmux.conf
-      link: link
+    dst: ~/.tmux.conf
+    src: tmux/.tmux.conf
+    link: absolute
   tmux-confdir:
-      dst: ~/.tmux
-      src: tmux/.tmux
-      link: link_children
+    dst: ~/.tmux
+    src: tmux/.tmux
+    link: link_children
   vim:
-      dst: ~/
-      src: vim
-      link: link_children
+    dst: ~/
+    src: vim
+    link: link_children
   zsh:
     dst: ~/
     src: zsh
@@ -47,10 +49,10 @@ dotfiles:
 profiles:
   home:
     dotfiles:
-      - bash
-      - git
-      - misc
-      - tmux
-      - tmux-confdir
-      - vim
-      - zsh
+    - bash
+    - git
+    - misc
+    - tmux
+    - tmux-confdir
+    - vim
+    - zsh
