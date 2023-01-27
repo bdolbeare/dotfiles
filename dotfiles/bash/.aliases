@@ -18,9 +18,6 @@ alias cdgit='cd ${HOME}/dev/git'
 # command word following the alias is also checked for alias expansion."
 alias sudo='sudo ';
 
-# Docker aliases
-alias dm='docker-machine'
-
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias localip="ipconfig getifaddr en0"
@@ -55,9 +52,8 @@ function javahome () {
   java -version
 }
 
-alias java8='javahome 1.8'
-alias java9='javahome 9'
-alias java10='javahome 10'
+alias java11='javahome 11'
+alias java17='javahome 17'
 
 
 # Clipboard access. I created these aliases to have the same command on Cygwin, Linux and OS X.

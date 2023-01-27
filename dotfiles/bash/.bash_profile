@@ -7,6 +7,8 @@
 # if echo ${BASH_VERSION} | egrep '^3' > /dev/null 2>&1 ; then exec ${HOMEBREW}/bin/bash; fi
 #
 
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 if [ -f ~/.bash_profile_pre ]; then
 	source ~/.bash_profile_pre
 fi
