@@ -1,9 +1,7 @@
-#!/bin/sh
-
 COLOR_RED=`tput setaf 1`
 COLOR_GREEN=`tput setaf 2`
 COLOR_YELLOW=`tput setaf 3`
-COLOR_RESET=`tput sgr0`	
+COLOR_RESET=`tput sgr0`
 
 #
 # Common functions
@@ -19,19 +17,19 @@ function echoincolor () {
 
 
 #
-# Continue function which prompts the user to see if they want to continue.  
+# Continue function which prompts the user to see if they want to continue.
 #
-# inputs: 
+# inputs:
 #     $1 => the prompt to present to the user
 #
 # returns:
 #     0 if the user wants to continue
 #     1 if the user DOES NOT want to continue
 #
-# example usage: 
-# 
+# example usage:
+#
 #     if asktocontinue "Do you want to run taskX?"; then echo "run taskX"; fi
-# 
+#
 function asktocontinue {
 	local msg=${1}
 	local waitingforanswer=true

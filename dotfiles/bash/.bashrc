@@ -1,5 +1,4 @@
 # Add `~/bin` to the `$PATH`
-export PATH="/usr/local/opt/grep/libexec/gnubin:$PATH";
 export PATH="$HOME/bin:$PATH";
 
 # Load the shell dotfiles, and then some:
