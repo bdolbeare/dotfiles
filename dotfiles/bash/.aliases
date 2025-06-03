@@ -52,6 +52,8 @@ function javahome () {
   java -version
 }
 
+alias javalist='/usr/libexec/java_home -V'
+
 alias java8='javahome 1.8'
 alias java11='javahome 11'
 alias java17='javahome 17'
