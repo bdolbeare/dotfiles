@@ -25,9 +25,18 @@ pip3 install -r dotdrop/requirements.txt --user
 
 or
 ```
-pip3 install docopt
-pip3 install ruamel_yaml
-pip3 install jinja2
+
+mkdir ~/.venv
+python3 -m venv ~/.venv
+source ~/.venv/bin/activate
+
+python3 -m pip install docopt
+python3 -m pip install ruamel_yaml
+python3 -m pip install jinja2
+python3 -m pip install distro
+python3 -m pip install tomli_w
+python3 -m pip install requests
+python3 -m pip install packaging
 ```
 
 
@@ -37,12 +46,3 @@ Step 3:  Run the setup script:
 ./dotdrop.sh install -p home
 ```
 
-## Script Summary
-
-**setup-osx.sh** run this command to update the OS, install XCode, and to write system defaults which control OS and applications settings/preferences. [view source](https://github.com/bdolbeare/env-setup/tree/master/mac/setup-osx.sh)
-
-**setup-brew.sh** run this command to install brew, upgrade any existing brew formulae, and install some common tools and applications. [view source](https://github.com/bdolbeare/env-setup/tree/master/mac/setup-brew.sh)
-
-**setup-tmux.sh** run this command to configure tmux with some preferred plugins. [view source](https://github.com/bdolbeare/env-setup/tree/master/mac/setup-tmux.sh)
-
-**setup-powerline.sh** run this command to install the Powerline fonts which I like to use in tmux [view source](https://github.com/bdolbeare/env-setup/tree/master/mac/setup-powerline.sh)
